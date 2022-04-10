@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/teachers.css">
+    <title>KHATRA Transi</title>
+</head>
+<body>
+    <nav>
+        <ul class="list-collection">
+            <div id="backTrans"></div>
+            <li class="list-item"><a onmouseover="myFun()" href="#">home</a></li>
+            <li class="list-item"><a onmouseover="mySecondFun()" href="#">dashboard</a></li>
+            <li class="list-item"><a onmouseover="myThirdFun()" href="#">about</a></li>
+            <li class="list-item"><a onmouseover="myfourthFun()" href="#">contact</a></li>
+
+        </ul>
+        
+    </nav>
+    <script>
+        var x = document.getElementById('backTrans');
+
+        function myFun(){
+            x.style.top = '285px';
+        }
+        function mySecondFun(){
+            x.style.top = '335px'
+        }
+        function myThirdFun(){
+            x.style.top = '382px';
+        }
+        function myfourthFun(){
+            x.style.top = '430px';
+        }
+
+    </script>
+</body>
+</html>
