@@ -36,7 +36,7 @@ const cardOptions = {
 const coverOberserver = new IntersectionObserver(function(entries,coverOberserver){
     entries.forEach(entry =>{
         if(!entry.isIntersecting){
-            coverCard.classList.remove('ani-up');
+            return
                        
         }else{
             coverCard.classList.add('ani-up');
@@ -54,7 +54,7 @@ const otherOptions = {
 const moreServicesObserver = new IntersectionObserver(function(entries,moreServicesObserver){
     entries.forEach(entry =>{
        if(!entry.isIntersecting){
-           ourServices.classList.remove('left');
+           return
        }else{
             ourServices.classList.add('left');
             console.log('run')
