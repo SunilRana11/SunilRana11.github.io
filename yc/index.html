@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/mediaquery.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    
+
+    <!-- <link rel="stylesheet" href="./css/master.css"> -->
+    <script src="https://kit.fontawesome.com/515ba4bfbf.js" crossorigin="anonymous"></script>
+    <title>YMC</title>
+</head>
+<body>
+    <!-- POP UP LOGIN FORM -->
+    <div class="form-container">
+        <div class="form-box close-form">
+            <div class="button-box close-form">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="social-icons close-form">
+                <img src="./img/fb.png" alt="">
+                <img src="./img/tw.png" alt="">
+                <img src="./img/gp.png" alt="">
+            </div>
+            <form id="login" class="input-group close-form">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span class="rem-term">Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id="register" class="input-group close-form">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Enter email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span class="rem-term">I agree to terms & conditions</span>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="main-container">
+
+                <!-- NAV-BAR  -->
+            <header class="header">
+                <div class="container ">
+                   <div class="flex-container">
+                        <div class="logo">
+                            <span class="color-text">YMC</span>
+                        </div>
+                        <nav>
+                            <ul class="list-collection">
+                                <li class="list-item"><a class="become-pro" href="./becomeprofessional.html">Become a professional</a></li>
+                                <li class="list-item join">Join Us</li>
+                            </ul>
+                        </nav>
+                   </div>
+                </div>
+            </header>
+                <!-- Main Section -->
+                <main class="main">
+                   <div class="flex-container hx-9">
+                    <div class="tag-line">
+                        <h1>Service at your</h1>
+                        <h1>fingertip</h1>
+                        <div class="search-service">
+                            <input id="search" type="search" placeholder="Type here to search">
+                            <button class="search-btn">Search</button>
+                        </div>
+                        <p>Popular: Home Care,Pet Care,Self Care etc..</p>
+                    </div>
+                    <img class="main-img" src="./img/mob.png" alt="">
+                   </div>
+                   <div class="wave">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                </main>
+                
+
+            <!-- Our Popular Services -->
+
+         <div class="services">
+            <div class="cover-container container">
+                <h1 class="section-title">Popular Services</h1>
+                  <div class="popular-services">
+                      <div class="cover-card">
+                          <img src="./img/1.png" alt="">
+                          <p>House Repair</p>
+                      </div>
+                      <div class="cover-card">
+                          <img src="./img/2.png" alt="">
+                          <p>Cleaning</p>
+                      </div>
+                      <div class="cover-card">
+                          <img src="./img/3.png" alt="">
+                          <p>Applaince Repair</p>
+                      </div>
+                      <div class="cover-card">
+                          <img src="./img/4.png" alt="">
+                          <p>Self Care</p>
+                      </div>
+                  </div>
+            </div>
+  
+         </div>
+            <!-- More Of Our Service  -->
+
+            <div class="more-services"> 
+                <div class="wave2">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div class="container">
+                    <h1 class="section-title">Explore more services</h1>
+                    <ul class="our-services">
+                        <span class="prev shuf-btn"></span>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/alexis-brown-omeaHbEFlN4-unsplash.jpg" alt=""> <p>Tution teacher</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Carpenter</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/istockphoto-519870714-170667a.jpg" alt=""> <p>Gardener</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/nathan-dumlao-ewGMqs2tmJI-unsplash.jpg" alt=""> <p>Massage</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/pang-yuhao-_kd5cxwZOK4-unsplash.jpg" alt=""> <p>Facial</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
+                        </li>
+                        <li class="services-list">
+                            <img class="all-service-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Facial</p>
+                        </li>
+                        <span class="next shuf-btn"></span>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <!-- Our Valuable Customer Views or Comments -->
+            <div class="customer-view">
+                <div class="container">
+                    <h1>Our Customer Voice</h1>
+
+                   <div class="review-container">
+                        <div class="reviews">
+                            <div id="lastclone"  class="review-section">
+                                <img class="cmt-img" src="./img/undraw_certification_aif8.svg" alt="">
+                                <p class="cmt">When you want to set up a business that really is bigger than you, you will need a lot of assistance. That's exactly what "they" do</p>
+                            </div>
+                            <div class="review-section">
+                                <img  class="cmt-img" src="./img/undraw_teacher_35j2.svg" alt="">
+                                <p class="cmt">It was a pleasure to work with such a talented group. I like their dedication and enthusiasm.</p>
+                            </div>
+                            <div class="review-section">
+                                <img  class="cmt-img" src="./img/undraw_city_driver_re_0x5e.svg" alt="">
+                                <p class="cmt">We've been working with this team for a long time. They are extremely compatible and adaptable. They have the advanced technologies, that's why I work with them.</p>
+                            </div>
+                            <div class="review-section">
+                                <img  class="cmt-img" src="./img/undraw_new_ideas_jdea.svg" alt="">
+                                <p class="cmt">You receive what you desire and need. Such a wonderful group of individuals. I hope to collaborate with them in the near future.</p>
+                            </div>
+                            <div class="review-section">
+                                <img  class="cmt-img" src="./img/undraw_certification_aif8.svg" alt="">
+                                <p class="cmt">When you want to set up a business that really is bigger than you, you will need a lot of assistance. That's exactly what "they" do</p>
+                            </div>
+                            <div id="firstclone" class="review-section">
+                                <img  class="cmt-img" src="./img/undraw_teacher_35j2.svg" alt="">
+                                <p class="cmt">It was a pleasure to work with such a talented group. I like their dedication and enthusiasm.</p>
+                            </div>
+                        </div>
+                        <span class="next-cmt-btn"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="prev-cmt-btn"><i class="fa-solid fa-chevron-left"></i></span>
+                   </div>
+                </div>
+            </div>
+
+            <!-- Footer  -->
+
+        <div class="bg-others">
+            <div class="others container">
+                <div class="categories">
+                    <p>Categories</p>
+                    <ul class="categories-list">
+                        <li class="categories-item"><a class="links" href="#">Home Care</a></li>
+                        <li class="categories-item"><a class="links" href="#">Pet Care</a></li>
+                        <li class="categories-item"><a class="links" href="#">Self Care</a></li>
+                        <li class="categories-item"><a class="links" href="#">Educational</a></li>
+                        <li class="categories-item"><a class="links" href="#">Medical</a></li>
+                    </ul>
+                </div>
+                <div class="help-comm-about">
+                    <p>About</p>
+                    <a class="links" href="">Careers</a>
+                    <a class="links" href="">About</a>  
+                    <a class="links" href="">Terms of Service</a>  
+                    <a class="links" href="">Privacy policy</a>
+                        
+                    
+                </div>
+                <div class="help-comm-about">
+                    <p>contact via</p>
+                    <a class="links" href="tel:9866578037">+977 9866578037</a>
+                    <a class="links" href="tel:9866578037">+977 9866578037</a>
+                    <a class="links" href="mailto:sunil01op@gmail.com">Mail us</a>
+                </div>
+               <div class="help-comm-about">
+                   <p>community</p>
+                   <a class="links" href="">events</a>
+                   <a class="links" href="">blog</a>
+                   <a class="links" href="">become a seller
+                   </a>
+                   <a class="links" href="">invite a friend</a>
+                   
+               </div>
+            </div>
+        </div>
+            <footer>
+               <div class="container">
+                <div class="des">
+                    <p>&copy;2020 YMC  pvt ltd.</p>
+                    <a href="#">help & support</a>
+                    <a href="#">terms & condition</a>
+                    <section class="social-links">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </section>
+                </div>
+               </div>
+            </footer>
+    </div>
+
+    <!-- SCRIPTS TAP -->
+    <script src="./js/form.js"></script>
+    <script src="./js/comment.js"></script>
+    <script src="./js/slider.js"></script>
+</body>
+</html>
