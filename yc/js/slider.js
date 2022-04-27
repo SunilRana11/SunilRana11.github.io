@@ -13,7 +13,7 @@ const ourServices = document.querySelector('.our-services');
 
 
 const navOptions = {
-    rootMargin: "-220px 0px 0px 0px"
+    rootMargin: "-500px 0px 0px 0px"
 };
 
 const navObserver = new IntersectionObserver(function(entries,navObserver){
@@ -49,7 +49,7 @@ coverOberserver.observe(coverContainer);
 // Other more services
 
 const otherOptions = {
-    threshold: 0.5
+    threshold: 0.2
 }
 const moreServicesObserver = new IntersectionObserver(function(entries,moreServicesObserver){
     entries.forEach(entry =>{
@@ -57,7 +57,6 @@ const moreServicesObserver = new IntersectionObserver(function(entries,moreServi
            return
        }else{
             ourServices.classList.add('left');
-            console.log('run')
        }
     })
 },otherOptions);

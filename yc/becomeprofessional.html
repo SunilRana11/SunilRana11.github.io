@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/515ba4bfbf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/becomeprofessional.css">
-    <link rel="stylesheet" href="./css/master.css">
+    <!-- <link rel="stylesheet" href="./css/master.css"> -->
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
@@ -32,7 +32,7 @@
                 <input type="checkbox" class="check-box"><span class="rem-term">Remember Password</span>
                 <button type="submit" class="submit-btn">Log In</button>
             </form>
-            <form id="register" class="input-group close-form">
+            <form onsubmit="sendEmail(); reset(); return false;" id="register" class="input-group close-form">
                 <input type="text" class="input-field" placeholder="User Id" required>
                 <input type="email" class="input-field" placeholder="Enter email" required>
                 <input type="password" class="input-field" placeholder="Enter Password" required>
@@ -49,7 +49,6 @@
             </div>
             <nav>
                 <ul class="list-collection">
-                    <!-- <li class="list-item"><a class="become-pro" href="./becomeprofessional.html">Become a professional</a></li> -->
                     <li class="list-item join">Join Us</li>
                 </ul>
             </nav>
@@ -60,7 +59,7 @@
        <div class="hero">
             <div class="selling-call">
                 <h1>Start your journey</h1>
-                <p>You bring skill.We provide prospects</p>
+                <p>You bring skill. We provide prospects.</p>
             </div>
        </div>
     </div>
@@ -167,5 +166,22 @@
 
    <script src="./js/form.js"></script>
    <script src="./js/slider.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "sunilrana0op@gmail.com",
+        Password : "ymnmtsmvmucvqrgi",
+        To : 'sunil01op@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact From Enquiry",
+        Body : "Name: " + document.getElementById("username"). value + "<br> Email: " + document.getElementById("email"). value
+    }).then(
+    message => alert("Message Sent Succesfully")
+    );
+    }
+</script>
 </body>
 </html>

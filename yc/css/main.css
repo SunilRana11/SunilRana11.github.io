@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Palette+Mosaic&family=Roboto&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Dancing+Script&family=Palette+Mosaic&family=Roboto&family=Work+Sans&display=swap');
 
 :root{
   /* #00204a */
@@ -12,6 +12,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Poppins',sans-serif;
 }
 body{
   overflow-x: hidden;
@@ -25,7 +26,6 @@ body{
 main{
   background: linear-gradient(to right,pink,rgb(85, 244, 255));
   padding-top: calc(3rem + 15px);
-  /* margin-top: -60px; */
   position: relative;
 }
 /* WAVE SHAPE */
@@ -185,9 +185,8 @@ main{
 }
 
 .our-services{
-  height: 65vh;
+  min-height: 65vh;
   margin-top: 30px;
-
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,200px));
   grid-gap: 20px;
@@ -203,10 +202,9 @@ main{
 }
 
 .services-list{
-  height: 28vh;
+  min-height: 28vh;
   text-align: center;
   box-shadow: 5px 5px 15px rgb(110, 110, 110);
-  padding: 5px;
   border-radius: 16px;
   cursor: pointer;
   transition: all .2s ease;
@@ -234,7 +232,6 @@ main{
 
 }
 .customer-view h1{
-  font-family: 'Palette Mosaic', cursive;
   color: var(--front);
   padding: 15px 0 20px 0;
   font-size: 2.5rem;

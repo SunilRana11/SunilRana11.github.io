@@ -34,11 +34,11 @@
                 <input type="checkbox" class="check-box"><span class="rem-term">Remember Password</span>
                 <button type="submit" class="submit-btn">Log In</button>
             </form>
-            <form id="register" class="input-group close-form">
-                <input type="text" class="input-field" placeholder="User Id" required>
-                <input type="email" class="input-field" placeholder="Enter email" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="check-box"><span class="rem-term">I agree to terms & conditions</span>
+            <form onsubmit="sendEmail(); reset(); return false;" id="register" class="input-group close-form">
+                <input id="username" type="text" class="input-field" placeholder="User Id" required>
+                <input id="email" type="email" class="input-field" placeholder="Enter email" required>
+                <input id="password" type="password" class="input-field" placeholder="Enter Password" required>
+                <input id="agree-term" type="checkbox" class="check-box"><span class="rem-term">I agree to terms & conditions</span>
                 <button type="submit" class="submit-btn">Sign Up</button>
             </form>
         </div>
@@ -124,34 +124,34 @@
                     <ul class="our-services">
                         <span class="prev shuf-btn"></span>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/alexis-brown-omeaHbEFlN4-unsplash.jpg" alt=""> <p>Tution teacher</p>
+                            <img class="all-service-img right-img" src="./img/alexis-brown-omeaHbEFlN4-unsplash.jpg" alt=""> <p>Tution teacher</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Carpenter</p>
+                            <img class="all-service-img right-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Carpenter</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
+                            <img class="all-service-img right-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/istockphoto-519870714-170667a.jpg" alt=""> <p>Gardener</p>
+                            <img class="all-service-img right-img" src="./img/istockphoto-519870714-170667a.jpg" alt=""> <p>Gardener</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
+                            <img class="all-service-img right-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/nathan-dumlao-ewGMqs2tmJI-unsplash.jpg" alt=""> <p>Massage</p>
+                            <img class="all-service-img left-img" src="./img/nathan-dumlao-ewGMqs2tmJI-unsplash.jpg" alt=""> <p>Massage</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/pang-yuhao-_kd5cxwZOK4-unsplash.jpg" alt=""> <p>Facial</p>
+                            <img class="all-service-img left-img" src="./img/pang-yuhao-_kd5cxwZOK4-unsplash.jpg" alt=""> <p>Facial</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
+                            <img class="all-service-img left-img" src="./img/dom-fou-YRMWVcdyhmI-unsplash.jpg" alt=""> <p>Electrician</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
+                            <img class="all-service-img left-img" src="./img/kings-college-cambridge-uk-university.jpg" alt=""> <p>Pet Care</p>
                         </li>
                         <li class="services-list">
-                            <img class="all-service-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Facial</p>
+                            <img class="all-service-img left-img" src="./img/baim-hanif-pYWuOMhtc6k-unsplash.jpg" alt=""> <p>Facial</p>
                         </li>
                         <span class="next shuf-btn"></span>
                     </ul>
@@ -257,5 +257,22 @@
     <script src="./js/form.js"></script>
     <script src="./js/comment.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "sunilrana0op@gmail.com",
+            Password : "ymnmtsmvmucvqrgi",
+            To : 'sunil01op@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact From Enquiry",
+            Body : "Name: " + document.getElementById("username"). value + "<br> Email: " + document.getElementById("email"). value
+        }).then(
+        message => alert("Message Sent Succesfully")
+        );
+        }
+    </script>
 </body>
 </html>
