@@ -15,7 +15,7 @@
 
 <body>
     <div class="container singup-form">
-        <form onsubmit='sendEmail(); reset(); return false;'  class="needs-validation" novalidate>
+        <form onsubmit="sendEmail(); reset(); return false;"  class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationTooltip01">First name</label>
@@ -107,7 +107,14 @@
                 To : 'sunil01op@gmail.com',
                 From : document.getElementById("email").value,
                 Subject : "New Contact From Enquiry",
-                Body:"Name: " + document.getElementById("Username"). value + "<br> Email: " + document.getElementById("InputEmail"). value
+                Body: "Name: " + document.getElementById("Username").value + 
+                    "<br> Email: " + document.getElementById("InputEmail").value +
+                    '<br> Contact No.: ' + document.getElementById('InputMobile').value +
+                    '<br> Skill: ' + document.getElementById('InputSkill').value +
+                    '<br> Address: ' + 
+                    '<br> city: ' + document.getElementById('city').value +
+                    '<br> state: ' + document.getElementById('state').value +
+                    '<br> zip: ' + document.getElementById('zip').value
             }).then(
                  message => alert("Message Sent Succesfully")
             );
@@ -116,12 +123,3 @@
 </body>
 
 </html>
-<!-- 
-"Name: " + document.getElementById("Username").value + 
-                    "<br> Email: " + document.getElementById("InputEmail").value +
-                    '<br> Contact No.: ' + document.getElementById('InputMobile').value +
-                    '<br> Skill: ' + document.getElementById('InputSkill').value +
-                    '<br> Address: ' + 
-                    '<br> city: ' + document.getElementById('city').value +
-                    '<br> state: ' + document.getElementById('state').value +
-                    '<br> zip: ' + document.getElementById('zip').value -->
