@@ -71,8 +71,21 @@
     .prev-cmt-btn{
       left: 0px;
     }
+    .team-descri{
+      align-items: left;
+    }
+    .team-descri p{
+      font-size: 1.1rem;
+      text-align: left;
+    }
+    .color-text{
+      font-size: 2rem;
+
+    }
+  
   }
-  @media (max-width:500px) {
+  @media (max-width:530px) {
+    
     .review-container{
       width: 300px;
     }
@@ -91,12 +104,20 @@
     .des p , .des a{
       font-size: 0.7rem;
     }
-    .our-services li:nth-child(even){
+    .our-services img,
+    .popular-services img{
+      height: 20vh;
+    }
+    /* .our-services,.popular-services{
+      grid-template-columns: repeat(2,minmax(120px,1fr));
+    } */
+    .our-services li:nth-child(odd){
       display: none;
     }
     #search{
       width: 60%;
-  }
+    }
+    
   }
   @media (min-width:700px) and (max-width:1000px) {
     .popular-services{
