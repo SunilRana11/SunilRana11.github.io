@@ -21,10 +21,8 @@ body{
   margin:0 auto;
   position: relative;
 }
-/* Form  */
-.form-container{
-  transform: scaleY(0);
-}
+
+
 /* Main container */
 main{
   background: linear-gradient(to right,pink,rgb(85, 244, 255));

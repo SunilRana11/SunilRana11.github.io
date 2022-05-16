@@ -21,6 +21,7 @@
 
   join.addEventListener('click',function(){
       formContainer.style.transform = 'scaleY(1)';
+      formBox.style.transform = 'scaleY(1)';
       showForm();
   })
 
