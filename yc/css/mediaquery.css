@@ -108,9 +108,9 @@
     .popular-services img{
       height: 20vh;
     }
-    /* .our-services,.popular-services{
+    .our-services,.popular-services{
       grid-template-columns: repeat(2,minmax(120px,1fr));
-    } */
+    }
     .our-services li:nth-child(odd){
       display: none;
     }
