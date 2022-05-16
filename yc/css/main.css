@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Palette+Mosaic&family=Roboto&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&&family=Roboto&family=Work+Sans&family=Macondo&display=swap');
 
 :root{
   /* #00204a */
@@ -102,16 +102,11 @@ main{
 .services{
   padding: 30px;
   text-align: center;
-  /* position: relative;
-  min-height: 60vh; */
+  
 }
 
 .popular-services{
   margin-top: 50px;
-  /* position: absolute;
-  width: 100%;
-  top: 60%;
-  left: 30%; */
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(180px,200px));
@@ -190,7 +185,6 @@ main{
 .our-services{
   min-height: 65vh;
   margin-top: 30px;
-
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,200px));
   grid-gap: 20px;
@@ -228,13 +222,70 @@ main{
   border-radius: 0 0 16px 16px ;
 }
 
+/* ABOUT US */
+
+.about-us{
+  padding: 50px;
+  background: linear-gradient(rgb(93, 155, 206),rgb(255, 187, 198));
+  border: 3px solid #fff;
+}
+.about-container{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+}
+.team-img{
+  justify-self: left;
+}
+.team{
+  width: 100%;
+  float: right;
+}
+.team-descri{
+  margin-top: 30px;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.team-descri h2{
+  color:#fff !important;
+  font-family: 'Dancing Script', cursive;
+}
+
+.team-descri p{
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+.connect{
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 16px;
+  width: max-content;
+  cursor: pointer;
+  transition: all .5s ease;
+  border: 2px solid steelblue;
+  background-color: steelblue;
+  box-shadow: 5px 0px 5px 4px var(--primary-color);
+
+}
+.connect:hover{
+  border: 2px solid steelblue;
+  background-color: steelblue;
+  transform: scale(1.02);
+  box-shadow: none;
+
+}
 
 /* REVIEWS */
 .customer-view{
   text-align: center; 
   padding: 20px 0  40px 0;
-  background: linear-gradient(rgb(93, 155, 206) 5%,rgb(255, 187, 198));
-
+  background: linear-gradient(rgb(255, 187, 198),var(--primary-color));
 }
 .customer-view h1{
   color: var(--front);
@@ -354,6 +405,33 @@ main{
   color: #fff;
   text-decoration: underline;
 }
+.links{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Contact us */
+#contact{
+  background-color: var(--primary-color);
+}
+#contact h2{
+  text-align: center;
+  color: #fff !important;
+}
+
+.media-links{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  width: 33%;
+}
+.card img{
+  height: 60px;
+  
+}
+
 /* Footer */
 
 footer{
@@ -385,13 +463,6 @@ footer{
 .social-links i:hover{
   opacity: 1;
   transform: scale(1.1);
-}
-
-
-
-.color-hi{
-  color: orange;
-  font-size: 1.5rem;
 }
 /* KEYFRAMES */
 
