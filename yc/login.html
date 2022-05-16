@@ -20,6 +20,7 @@
                 <img src="./img/tw.png" alt="">
                 <img src="./img/gp.png" alt="">
             </div>
+           <div class="ani-form">
             <form id="login" class="input-group">
                 <input type="text" class="input-field" placeholder="User Id" required>
                 <input type="password" class="input-field" placeholder="Enter Password" required>
@@ -33,10 +34,12 @@
                 <input type="checkbox" class="check-box"><span>I agree to terms & conditions</span>
                 <button type="submit" class="submit-btn">Sign Up</button>
             </form>
+           </div>
         </div>
         
     </div>
     <script>
+        // LOGIN SIGNUP FORM
         var x = document.getElementById("login")
         var y = document.getElementById("register")
         var z = document.getElementById("btn")
@@ -51,6 +54,27 @@
             y.style.left = "450px"
             z.style.left = "0px"
         }
+        // OPEN CLOSE FORM
+        const join = document.querySelector('.join');
+        const formContainer = document.querySelector('.form-container');
+
+        join.addEventListener('click',function(){
+            formContainer.style.transform = 'scaleY(1)';
+            showForm();
+        })
+
+        function showForm(){
+            
+            formContainer.addEventListener('click',function(e){
+                let fCC1 = e.target.classList.contains('close-form');
+                let fCC2 = e.target.parentElement.classList.contains('close-form');
+                if(!fCC1 & !fCC2) {
+                    formContainer.style.transform = 'scaleY(0)';
+                }else{
+                    formContainer.style.transform = 'scaleY(1)';
+                }
+            });
+        };
     </script>
 </body>
 </html>

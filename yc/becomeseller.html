@@ -1,125 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/becomeseller.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/master.css">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <title>Join as a seller</title>
 </head>
-
 <body>
-    <div class="container singup-form">
-        <form onsubmit="sendEmail(); reset(); return false;"  class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip01">First name</label>
-                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip02">Last name</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Username">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="Username" placeholder="Username"
-                            aria-describedby="validationTooltipUsernamePrepend" required>
-                        <div class="invalid-tooltip">
-                            Please choose a unique and valid username.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="InputEmail">Email address</label>
-                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
-                    placeholder="Enter email" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-            </div>
-            <div class="form-group">
-                <label for="InputPassword1">Password</label>
-                <input type="password" class="form-control" id="InputPassword" placeholder="Password" required>
-            </div>
-            <div class="form-group">
-                <label for="InputMobile">Mobile no.</label>
-                <input type="number" class="form-control" id="InputMobile" placeholder="Contact no." required>
-            </div>
-            <div class="form-group">
-                <label for="InputSkill">Choose your skill</label>
-                <select id="InputSkill" class="custom-select">
-                    <option selected>Open this select menu</option>
-                    <option value="1">Home care</option>
-                    <option value="2">Pet care</option>
-                    <option value="3">Self Care</option>
-                </select>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" id="city" placeholder="City" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="state">State</label>
-                    <input type="text" class="form-control" id="state" placeholder="State" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid state.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="text" class="form-control" id="zip" placeholder="Zip" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid zip.
-                    </div>
-                </div>
-            </div>
+    <div class="seller">
+        <div class="seller-container">
+            <form>
+               <fieldset>
+                   <legend>Set up profile for your seller account</legend>
+                    <p> First Name:</p>
+                   <input type="text" name="firstName" id="firstName" placeholder="Enter your first name">
+                   <p> Middle Name:</p>
+                   <input type="text" name="middleName" id="middleName" placeholder="Enter your middle name">
+                   <p> Last Name:</p>
+                   <input type="text" name="lastName" id="lastName" placeholder="Enter your last name">
+                   <p> Enter your email:</p>
+                   <input type="email" name="email" id="mailId" placeholder="Enter your email">
+                   <p> Enter mobile no. :</p>
+                   <input type="tel" name="contactNO" id="contactNO" placeholder="Enter your mobile no.">
+                   <p> Upload your picture:
+                   <input type="file" name="profileImage" id="profileImage"></p>
+                  <div class="your-skill">
+                      <p>Choose your skill</p>
+                   <input type="checkbox" name="carpenter" id="carpenter">
+                   <label for="carpenter">Carpenter</label><br>
+                   <input type="checkbox" name="electrician" id="electrician">
+                   <label for="electrician">Electrician</label><br>
+                   <input type="checkbox" name="gardener" id="gardener">
+                   <label for="gardener">Gardener</label><br>
+                   <input type="checkbox" name="petcare" id="petcare">
+                   <label for="petcare">Petcare</label><br>
+                   <input type="checkbox" name="salon" id="salon">
+                   <label for="salon">Salon</label><br>
+                  </div>
+               </fieldset>
 
-           <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            </form>
+        </div>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "sunilrana0op@gmail.com",
-                Password : "ymnmtsmvmucvqrgi",
-                To : 'sunil01op@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New Contact From Enquiry",
-                Body: "Name: " + document.getElementById("Username").value + 
-                    "<br> Email: " + document.getElementById("InputEmail").value +
-                    '<br> Contact No.: ' + document.getElementById('InputMobile').value +
-                    '<br> Skill: ' + document.getElementById('InputSkill').value +
-                    '<br> Address: ' + 
-                    '<br> city: ' + document.getElementById('city').value +
-                    '<br> state: ' + document.getElementById('state').value +
-                    '<br> zip: ' + document.getElementById('zip').value
-            }).then(
-                 message => alert("Message Sent Succesfully")
-            );
-        }
-    </script>
 </body>
-
 </html>

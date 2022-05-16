@@ -16,6 +16,8 @@
   // OPEN CLOSE FORM
   const join = document.querySelector('.join');
   const formContainer = document.querySelector('.form-container');
+  const formBox = document.querySelector('.form-box');
+
 
   join.addEventListener('click',function(){
       formContainer.style.transform = 'scaleY(1)';
@@ -23,7 +25,7 @@
   })
 
   function showForm(){
-      
+    formBox.style.transform = 'scaleY(1)';
       formContainer.addEventListener('click',function(e){
           let fCC1 = e.target.classList.contains('close-form');
           let fCC2 = e.target.parentElement.classList.contains('close-form');
