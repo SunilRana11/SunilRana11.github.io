@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Dancing+Script&family=Palette+Mosaic&family=Roboto&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Palette+Mosaic&family=Roboto&family=Work+Sans&display=swap');
 
 :root{
   /* #00204a */
@@ -12,7 +12,6 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Poppins',sans-serif;
 }
 body{
   overflow-x: hidden;
@@ -22,10 +21,15 @@ body{
   margin:0 auto;
   position: relative;
 }
+/* Form  */
+.form-container{
+  transform: scaleY(0);
+}
 /* Main container */
 main{
   background: linear-gradient(to right,pink,rgb(85, 244, 255));
   padding-top: calc(3rem + 15px);
+  /* margin-top: -60px; */
   position: relative;
 }
 /* WAVE SHAPE */
@@ -100,16 +104,16 @@ main{
 .services{
   padding: 30px;
   text-align: center;
-  position: relative;
-  height: 60vh;
+  /* position: relative;
+  min-height: 60vh; */
 }
 
 .popular-services{
   margin-top: 50px;
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   top: 60%;
-  left: 30%;
+  left: 30%; */
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(180px,200px));
@@ -117,6 +121,7 @@ main{
   grid-gap: 30px;
   opacity: 0;
   transition: all 1s ease-in;
+
 }
 .popular-services.ani-up{
   left: 0%;
@@ -187,6 +192,7 @@ main{
 .our-services{
   min-height: 65vh;
   margin-top: 30px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,200px));
   grid-gap: 20px;
@@ -202,9 +208,10 @@ main{
 }
 
 .services-list{
-  min-height: 28vh;
+  height: 28vh;
   text-align: center;
   box-shadow: 5px 5px 15px rgb(110, 110, 110);
+  padding: 5px;
   border-radius: 16px;
   cursor: pointer;
   transition: all .2s ease;
@@ -369,7 +376,7 @@ footer{
   padding: 5px;
 }
 .social-links a{
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .social-links i{
   transition: .3s ;
@@ -382,6 +389,12 @@ footer{
   transform: scale(1.1);
 }
 
+
+
+.color-hi{
+  color: orange;
+  font-size: 1.5rem;
+}
 /* KEYFRAMES */
 
 @keyframes joinShuf-btn {
@@ -415,3 +428,4 @@ footer{
   position: relative;
   
 }
+

@@ -13,7 +13,7 @@ const ourServices = document.querySelector('.our-services');
 
 
 const navOptions = {
-    rootMargin: "-500px 0px 0px 0px"
+    rootMargin: "-350px 0px 0px 0px"
 };
 
 const navObserver = new IntersectionObserver(function(entries,navObserver){
@@ -36,6 +36,7 @@ const cardOptions = {
 const coverOberserver = new IntersectionObserver(function(entries,coverOberserver){
     entries.forEach(entry =>{
         if(!entry.isIntersecting){
+            // coverCard.classList.remove('ani-up');
             return
                        
         }else{
@@ -49,12 +50,13 @@ coverOberserver.observe(coverContainer);
 // Other more services
 
 const otherOptions = {
-    threshold: 0.2
+    threshold: 0.25
 }
 const moreServicesObserver = new IntersectionObserver(function(entries,moreServicesObserver){
     entries.forEach(entry =>{
        if(!entry.isIntersecting){
-           return
+        //    ourServices.classList.remove('left');
+        return
        }else{
             ourServices.classList.add('left');
        }
