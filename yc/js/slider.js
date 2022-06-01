@@ -64,3 +64,64 @@ const moreServicesObserver = new IntersectionObserver(function(entries,moreServi
 },otherOptions);
 
 moreServicesObserver.observe(moreServices);
+
+
+// About our team oberver
+
+const aboutUs = document.querySelector('.about-us');
+const teamImg = document.querySelector('.team-img');
+const teamDes = document.querySelector('.team-descri');
+
+const team = {
+    threshold : 0.5
+}
+
+const aboutOberserver = new IntersectionObserver(function(entries,aboutOberserver){
+    entries.forEach(entry =>{
+        if(!entry.isIntersecting){
+            return
+        } else {
+            teamImg.classList.add('team-img-int');
+            teamDes.classList.add('team-descri-int');
+        }
+    })
+},team)
+
+aboutOberserver.observe(aboutUs)
+
+
+// Main section 
+
+const tagHead = document.querySelector('.headTag');
+const tagHead2 = document.querySelector('.headTag2');
+const searchService = document.querySelector('.search-service')
+const popTxt = document.querySelector('.pop-text');
+const tagImg = document.querySelector('.main-img');
+
+window.addEventListener('DOMContentLoaded',mainAni()
+)
+
+function mainAni(){
+    //Header
+    header.style.marginTop = '0%';
+    header.style.opacity = '1'
+    // head Tag
+    tagHead.style.marginLeft = '0%';
+    tagHead.style.opacity = '1';
+
+    // head tag2
+    tagHead2.style.marginLeft = '0%';
+    tagHead2.style.opacity = '1';
+
+    // Search service
+    searchService.style.marginLeft = '0%';
+    searchService.style.opacity = '1';
+
+    // mainImage
+    tagImg.style.opacity = '1';
+
+    // popText
+    popTxt.style.marginLeft = '0%';
+    popTxt.style.opacity = '0.7';
+
+}
