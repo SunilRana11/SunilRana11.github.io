@@ -255,6 +255,7 @@ main{
   width: 90%;
   max-height: 90%;
 
+  
   /* for animation */
   opacity: 0;
   transition: all .4s ease-in;

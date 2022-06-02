@@ -73,7 +73,7 @@ const teamImg = document.querySelector('.team-img');
 const teamDes = document.querySelector('.team-descri');
 
 const team = {
-    threshold : 0.5
+    threshold : 0.8
 }
 
 const aboutOberserver = new IntersectionObserver(function(entries,aboutOberserver){
