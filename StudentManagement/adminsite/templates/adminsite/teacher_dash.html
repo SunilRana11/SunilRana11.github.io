@@ -1,0 +1,115 @@
+{% extends 'adminsite/main_dash.html' %}
+
+
+{% block content %}
+<style>
+    .teacher{
+        margin-left: 30px;
+    }
+    .btn{
+        width: max-content;
+    }
+    table{
+        width: 90%;
+        margin: 30px auto;
+    }
+    table th{
+        text-align: center;
+        color: steelblue;
+    }
+    input[type = 'search']{
+        width: 40%;
+        padding: 5px;
+        outline: 0px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        border: 0px;
+        
+    }
+   
+    table tr td,
+    table tr th{
+        border: 1px solid steelblue;
+        padding: 7px;
+    }
+    table tr td img{
+        height: 50px;
+        margin: 0px auto;
+    }
+    .search{
+        margin-top: 20px;
+        color: #fff;
+        background-color: #555;
+        width: 97%;
+        padding: 15px;
+        border-radius: 16px;
+    }
+</style>
+<section class="home">
+    <div class="text">Dashboard - Teachers</div>
+    <div class = 'teacher'>
+        <div class="search">
+            <h6> Search Teacher </h6>
+            <form method="get">
+                <label for = 'name'>Name: </label>
+                <input id = 'name'  name = 'q' type="search" placeholder="Search with Name and Address..." aria-label="Search">
+                <label for = 'joined-after'>Joined After: </label>
+                <input id = 'joined-after'  name = 'joined-after' type="date" aria-label="Search">
+                <label for = 'joined-before'>Joined Before: </label>
+                <input id = 'joined-before'  name = 'joined-before' type="date" aria-label="Search">
+                        
+                <button class="btn btn-primary mx-3" type="submit">Search</button>
+            </form>
+        </div>
+    
+            <table>
+                <tr>
+                    <th>Picture </th>
+                    <th>Name </th>
+                    <th>Address  </th>
+                    <th>Joined  </th>
+                    <th>contact </th>
+                    <th>Level </th>
+                    <th>status </th>
+                    
+                    {% if user.is_admin %}
+                    
+                    <th>Action </th>
+                    
+            
+                    {% endif %}
+                </tr>
+
+                {% for teacher in teachers  %}
+                        <tr>
+                            <td><img src ="/images/{{teacher.image}}"></td>
+                            <td>{{teacher.name}}</td>
+                            <td>{{teacher.address}}</td>
+                            <td>{{teacher.joined_date}}</td>
+                            <td>{{teacher.contact}}</td>
+                            <td> {{teacher.teaches}}</td>
+                            <td>{{teacher.status}}</td>
+                            {% if user.is_admin %}
+                            <td>
+                                <a href="{% url 'edit-teacher' teacher.id %}"class="btn btn-secondary">Edit</a>
+                                <a href = "{% url 'delete-teacher' teacher.id %}"class="btn btn-danger mx-3">Delete</a>
+                                </td>
+                             {% endif %}
+                        </tr>
+                
+                {% endfor %}
+            </table>
+    
+    
+    
+        <a class='btn btn-primary my-3 mx-3' href = "{% url 'add-teacher' %}">Add Teacher </a>
+    
+    </div>
+
+</section>
+
+
+{% endblock content %}
+
+
+

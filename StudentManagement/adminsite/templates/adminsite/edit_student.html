@@ -1,0 +1,20 @@
+{% extends 'adminsite/main_dash.html' %}
+
+
+{% block content %}
+<section class="home">
+    <div class="text">Dashboard - Edit Student</div>
+
+    
+    <form action = '' method = 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <a class='btn btn-secondary ' href = "{% url 'student-dashboard' %}">cancel</a>
+        <input type = 'submit' class = 'mx-3 btn btn-primary' value = 'Submit'>
+    </form>
+
+</section>
+
+
+{% endblock %}

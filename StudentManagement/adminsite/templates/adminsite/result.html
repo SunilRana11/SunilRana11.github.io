@@ -1,0 +1,118 @@
+{% extends 'adminsite/main_dash.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    input[type = 'search'],
+    input[type = 'number']{
+        width: 30%;
+        padding: 5px;
+        outline: 0px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        border: 0px;
+    }
+    input[type = 'number']{
+        margin-top: 10px;
+    }
+    .search{
+        margin-left: 30px;
+        margin-top: 20px;
+        color: #fff;
+        background-color: #555;
+        border-radius: 16px;
+        padding: 20px 0 10px 10px;
+    }
+    .professionals{
+        margin-top: 15px;
+    }
+    .result img{
+        width: 100%;
+        height: 300px;
+        filter: blur(1px);
+        position: relative;
+        z-index: 1;
+        border-radius: 4px;
+        transform: scale(1);
+        transition: all .2s ease;
+    }
+    .result p{
+        z-index: 1;
+        position: absolute;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .result p a{
+        text-decoration: none;
+        color: teal;
+        text-transform: capitalize;
+    }
+    .result .dlt{
+        border: 2px solid teal;
+        padding: 7px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    .result{
+        border: 2px solid teal;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+    .result:hover img{
+        transform: scale(1.25);
+        filter: blur(0px)
+
+    }
+    .result .dlt:hover{
+        border: 1px solid #fff;
+        color:#fff;
+        background: teal;
+    }
+    .result:hover p{
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+</style>
+<section class="home">
+    <div class="text">Dashboard - Results</div>
+
+    <form class= 'search' method = 'GET'>
+        <label for='Standard'>Standard: </label>
+        <input id='Standard'  name = 'q' type="search" placeholder="Search result with class ... " aria-label="Search"> <br/>
+        <label for='batch'>Batch: </label>
+        <input id='batch'  name = 'batch' type="number" placeholder="Search result with batch.. " aria-label="Search">
+        <br/>
+        <button class="btn btn-primary mx-3 my-3" type="submit">Search</button>
+        </form>
+    <div class = 'professionals'>
+        
+        {% for result in results  %}
+        <div class = 'result'>
+            <img  src = "/images/{{result.image}}">
+            <p> 
+                <a class = ' dlt mx-3' href = "{% url 'view-result' result.id %}">  view result </a>
+                {% if user.is_admin %}
+                <a href = "{% url 'delete-result' result.id %}"class="btn btn-warning mx-3">Delete</a>
+                {% endif %}
+            </p> 
+           
+        </div>   
+            
+        {% endfor %}
+
+        {% if user.is_admin %}
+            <form action = '' method= 'POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type = 'submit' class = 'btn btn-primary mx-3' value = 'Submit'>
+            </form>
+        {% endif %}
+    </div>
+
+
+
+</section>
+
+
+{% endblock %}

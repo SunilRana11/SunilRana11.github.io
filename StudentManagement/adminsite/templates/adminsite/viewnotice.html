@@ -1,0 +1,32 @@
+{% extends 'adminsite/main_dash.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+
+
+    .result img{
+        height: 300px;
+        max-width: 100%;
+    }
+    .result p{
+        text-transform: uppercase;
+
+    }
+</style>
+
+<section class="home">
+    <div class="text">Dashboard - ViewNotice</div>
+
+        
+        <div class = 'result'>
+            <img  src = "/images/{{notice.image}}">
+            <p>  {{notice.title}}</p> 
+            <p>  {{notice.description}}</p> 
+            <a class='btn btn-secondary ' href = "{% url 'notice' %}">Back</a>
+        </div>       
+
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'adminsite/main_dash.html' %}
+
+{% block content %}
+<style>
+    .result{
+        border: 2px solid steelblue;
+    }
+    .result img{
+        width: 100%;
+        height: 300px;
+    }
+    .result p a{
+        text-decoration: none;
+        color: #fff;
+        padding: 7px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
+
+    .result .view{
+        background: teal;
+    }
+    .result .view:hover{
+        background: #09b07b;
+    }
+</style>
+
+<section class="home">
+    <div class="text">Dashboard - Notice</div>
+
+    <div class = 'professionals'>
+
+        {% for notice in notices  %}
+        <div class = 'result'>
+            <img  src = "/images/{{notice.image}}">
+            <p>
+                <a class='view mx-3 my-3' href = "{% url 'view-notice' notice.id %}">  view notice </a>
+                {% if user.is_admin %}
+                <a  href = "{% url 'delete-notice' notice.id %}"class="btn btn-warning mx-3 my-3">Delete</a>
+                
+                {% endif %}
+            </p> 
+        </div>       
+        {% endfor %}
+        <form action = '' method= 'POST' enctype="multipart/form-data">
+            {% csrf_token %}
+            <strong> Notice Form </strong>
+            {{form.as_p}}
+            <input type = 'submit' class = 'btn btn-primary mx-3' value = 'Submit'>
+        </form>
+    </div>
+
+    
+  
+     
+</section>
+
+{% endblock content %}
